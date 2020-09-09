@@ -10,3 +10,14 @@ def multiplicativeinverse(number):
                 mi[a] = b
                 mi[b] = a
     return bytes(mi)
+
+def euclideanrec(a, b):
+    if b == 0:
+        return a
+    else:
+        return euclideanrec(b, a % b)
+
+def euclideanloop(a, b):
+    while b != 0:
+        (a, b) = (b, a % b)
+    return a
